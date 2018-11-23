@@ -11,7 +11,8 @@ class ToDo extends React.Component {
 
     createTask = text => ({
         taskText: text,
-        isCompleted: false
+        isCompleted: false,
+        key: Date.now() //good enough to make unique key in that case
     })
 
     addTask = () => this.setState({
@@ -19,6 +20,12 @@ class ToDo extends React.Component {
             this.createTask(
                 this.state.newTaskText
             )
+        )
+    })
+
+    deleteTask = taskKey => this.setState({
+        tasks: this.state.tasks.filter(
+            task => task.key !== taskKey
         )
     })
 
