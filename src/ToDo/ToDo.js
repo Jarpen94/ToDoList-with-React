@@ -1,4 +1,5 @@
 import React from 'react'
+import AddTask from './AddTask';
 
 class ToDo extends React.Component {
 
@@ -20,7 +21,8 @@ class ToDo extends React.Component {
             this.createTask(
                 this.state.newTaskText
             )
-        )
+        ),
+        newTaskText: ''
     })
 
     deleteTask = taskKey => this.setState({
@@ -47,15 +49,16 @@ class ToDo extends React.Component {
     onAllClickHandler = () => this.setState({ chosenFilter: 'COMPLETED' })
     onAllClickHandler = () => this.setState({ chosenFilter: 'UNCOMPLETED' })
 
-    onFilterTextChangeHandler = value => this.setState({ filterText: value })
-    onNewTaskTextChangeHandler = value => this.setState({ newTaskText: value })
+    onFilterTextChangeHandler = event => this.setState({ filterText: event.target.value })
+    onNewTaskTextChangeHandler = event => this.setState({ newTaskText: event.target.value })
 
 
     render() {
         return (
             <div>
-                ToDo
-      </div>
+                {/*remember to import it */}
+                < AddTask />
+            </div>
         )
     }
 }
