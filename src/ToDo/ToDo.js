@@ -43,12 +43,12 @@ class ToDo extends React.Component {
         )
     })
 
-    onAllClickHandler = () => this.setState({chosenFilter: 'ALL'})
-    onAllClickHandler = () => this.setState({chosenFilter: 'COMPLETED'})
-    onAllClickHandler = () => this.setState({chosenFilter: 'UNCOMPLETED'})
+    onAllClickHandler = () => this.setState({ chosenFilter: 'ALL' })
+    onAllClickHandler = () => this.setState({ chosenFilter: 'COMPLETED' })
+    onAllClickHandler = () => this.setState({ chosenFilter: 'UNCOMPLETED' })
 
-    onFilterTextChangeHandler= () => {}
-    onNewTaskTextChangeHandler = () => {}
+    onFilterTextChangeHandler = value => this.setState({ filterText: value })
+    onNewTaskTextChangeHandler = value => this.setState({ newTaskText: value })
 
 
     render() {
