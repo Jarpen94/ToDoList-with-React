@@ -4,11 +4,11 @@ const AddTask = (props) => (
     <div>
         <input
             type="text"
-            value={this.state.newTaskText}
-            onChange={this.onNewTaskTextChangeHandler}
+            value={props.newTaskText}
+            onChange={props.onNewTaskTextChangeHandler}
         />
         <button
-            onClick={this.addTask}
+            onClick={props.addTask}
         >
             Add Task!
                 </button>

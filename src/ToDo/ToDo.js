@@ -57,7 +57,11 @@ class ToDo extends React.Component {
         return (
             <div>
                 {/*remember to import it */}
-                < AddTask />
+                < AddTask
+                newTaskText={this.state.newTaskText}
+                onNewTaskTextChangeHandler = {this.onNewTaskTextChangeHandler}
+                addTask = {this.addTask}
+                />
             </div>
         )
     }
